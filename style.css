@@ -21,7 +21,7 @@ section {
   #title{
     font-family: 'outfit';
     font-weight: 900;
-    font-size: 2.8em;
+    font-size: 2.6em;
     margin-top: 0.5em;
   }
 
@@ -36,19 +36,19 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 5px; 
-    width: 700px;
-    height: 550px;
+    gap: 5px;
+    width: 560px;  
+    height: 440px; 
     padding: 5px;
-    margin-top: 2em;
-    background: #8B5A2B; 
+    margin-top: 1em;
+    background: #8B5A2B;
     border: 10px solid #6B4226;
-    border-radius: 10px;
+    border-radius: 10px; 
 }
 
 .chocolate-slot {
     background: #3E2723; 
-    padding: 15px;
+    padding: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,10 +57,11 @@ section {
 
 .chocolate-slot svg {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transform: scale(0.84);
 }
 
 .chocolate-slot:hover svg {
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-5px) scale(0.9);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -168,4 +169,23 @@ svg {
 #back a:hover {
   color: black;
   font-weight: 700;
+}
+
+#hyperlink-image img{
+  width: 70px;
+  display: block;    
+  margin: 0 auto;
+  position: static;  
+}
+
+#hyperlink-image {
+  text-align: center;
+}
+
+#rabbittitle{
+  font-size: 0.8em;
+  margin-top: 30px;  
+  margin-bottom: 0px;
+  position: static;
+  color: #4f2724;  
 }
