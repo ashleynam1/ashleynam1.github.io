@@ -1,75 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ashley's Assignments</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    /* Container grid for buttons */
-    .container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      padding: 20px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-    }
-    /* Button base style */
-    .btn {
-      display: block;
-      text-align: center;
-      padding: 15px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-    /* Active button style */
-    .btn.active {
-      background-color: #2f3e46;
-      color: white;
-    }
-    /* Active button hover effect */
-    .btn.active:hover {
-      background-color: #d8e6e4;
-      color: #2f3e46;
-    }
-    /* Disabled button style */
-    .btn.disabled {
-      background-color: #ccc;
-      color: #666;
-      pointer-events: none;
-      cursor: not-allowed;
-    }
-    /* Disabled button hover (no effect) */
-    .btn.disabled:hover {
-      background-color: #ccc;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skyline Composer</title>
+  <!-- p5.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Active buttons with placeholder external links -->
-    <a class="btn active" href="https://codepen.io/ashleynam/pen/jENXrPQ">S1A1</a>
-    <a class="btn active" href="https://codepen.io/ashleynam/pen/wBwNaZr?editors=1100">S1A2</a>
-    <a class="btn active" href="https://ashleynam1.github.io/S1FP/">S1FP</a>
-    <a class="btn active" href="https://ashleynam1.github.io/S2A2/">S2A2</a>
-    <a class="btn active" href="https://editor.p5js.org/ashleynam1/full/F4V24q5Wb">S2FP</a>
-    <a class="btn active" href="https://editor.p5js.org/ashleynam1/full/7yQRDxmso">S3A1</a>
-    <a class="btn active" href="https://ashleynam1.github.io/S3A2/" target="_blank">S3A2</a>
-    <!-- Disabled button -->
-    <a class="btn disabled" href="#">S3FP</a>
+  <!-- Time-of-day slider -->
+  <div id="controls">
+    <label for="timeRange">Time of Day:</label>
+    <input type="range" id="timeRange" min="0" max="2" step="1" value="1">
+    <span id="timeLabel">Day</span>
   </div>
 </body>
 </html>
