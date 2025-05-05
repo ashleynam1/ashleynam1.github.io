@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Plus Jakarta Sans", sans-serif; line-height: 1.5; color: #333; }
+
+header { padding: 1rem; }
+.site-title { font-size: 1.25rem; font-weight: bold; }
+.site-subtitle { font-size: 0.875rem; color: #666; }
+
+h1.section-title { margin: 2rem 1rem 1rem; font-size: 3rem; }
+
+/* Work grid rows */
+.row { display: flex; gap: 1rem; padding: 0 1rem; margin-bottom: 1rem; }
+.thumb {
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.thumb img {
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.thumb:hover img {
+  transform: scale(0.9);
+}
+
+/* Title, desc, icon */
+.title,
+.desc,
+.icon {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.thumb:hover .title,
+.thumb:hover .desc,
+.thumb:hover .icon {
+  opacity: 1;
+}
+
+.thumb-s2fp .title { color: #fff; }
+.thumb-s2fp .desc  { color: rgba(255, 255, 255, 0.8); }
+
+.title {
+  top: 1.2rem;
+  left: 1.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-10px);
+}
+.thumb:hover .title { transform: translateY(0); }
+.desc {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.2rem;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.6);
+  transform: translateY(10px);
+}
+.thumb:hover .desc { transform: translateY(0); }
+.icon {
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1.8rem !important;
+  height: auto;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.thumb:hover .icon {
+  transform: scale(1);
+  opacity: 0.8;
+}
+
+/* Thumbnail colors and image widths */
+.thumb-s1a1 { background-color: #FFEF9B; }
+.thumb-s1a1 img { width: 80%; }
+.thumb-s1a2 { background-color: #C7EBE0; }
+.thumb-s1a2 img { width: 50%; }
+.thumb-s1fp { background-color: #FFDFDF; }
+.thumb-s1fp img { width: 50%; }
+.thumb-s2a2 { background-color: #A2C46F; }
+.thumb-s2a2 img { width: 55%; }
+.thumb-s2fp { background-color: #FA6727; }
+.thumb-s2fp img { width: 65%; }
+.thumb-s3a1 { background-color: #F8E2A7; }
+.thumb-s3a1 img { width: 70%; }
+.thumb-s3a2 { background-color: #A3D9A5; }
+.thumb-s3a2 img { width: 60%; }
+.thumb-s3fp { background-color: #BDBCF7; }
+.thumb-s3fp img { width: 50%; }
+
+/* Aspect ratios and flex weights */
+.row1 .thumb:first-child { flex: 1; aspect-ratio: 1 / 1; }
+.row1 .thumb:last-child { flex: 2; aspect-ratio: 2 / 1; }
+.row2 .thumb { flex: 1; aspect-ratio: 3 / 2; }
+.row3 .thumb:first-child { flex: 2; aspect-ratio: 2 / 1; }
+.row3 .thumb:last-child { flex: 1; aspect-ratio: 1 / 1; }
+.row4 .thumb { flex: 1; aspect-ratio: 3 / 2; }
+
+@media (max-width: 600px) {
+  .row { flex-direction: column; }
+  .row .thumb { width: 100%; aspect-ratio: auto; height: auto; }
+  .thumb img { width: auto; max-width: 60%; }
+}
+
+
+    .reading-carousel {
+        position: relative;
+        background: #f9f9f9;
+        margin: 8rem 1rem;
+        padding: 1rem 1rem 2rem;
+        border-radius: 10px;
+      }
+      
+      .reading-carousel .section-title {
+        position: absolute;
+        top: -5.5rem;
+        right: 1rem;
+        background: #fff;
+        padding: 0 0.5rem;
+        margin: 0;
+        z-index: 1;
+      }
+      
+      .carousel {
+        position: relative;
+        width: 75%;
+        padding-bottom: 2rem;
+      }
+      
+      .reading-carousel .carousel .slide {
+        display: none;
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        height: 500px;
+      }
+      
+      .reading-carousel .carousel .slide.active {
+        display: block;
+      }
+      
+      .slide h2 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+      
+      .slide p {
+        font-size: 1.2rem;
+        color: #444;
+      }
+      
+      .carousel-button {
+        position: absolute;
+        bottom: -1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #666;
+      }
+      
+      .prev {
+        right: -25%;
+      }
+      
+      .next {
+        right: -32%;
+      }
+      
+
+    footer { 
+        display: flex; 
+        justify-content: space-between; 
+        padding: 1rem; 
+        font-size: 1rem; 
+        color: #000; 
+    }
